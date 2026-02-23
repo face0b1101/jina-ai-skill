@@ -1,0 +1,37 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Added
+
+- Example usage section in README with natural-language prompt examples
+- Claude Desktop installation instructions (zip upload via Settings > Capabilities)
+- CHANGELOG.md
+
+## [1.0.0] - 2026-02-23
+
+### Added
+
+- Initial release of Jina AI skill for AI coding assistants and Claude Desktop
+- Comprehensive REST API documentation for Jina AI interactions via curl
+- Authentication guide with Bearer token and `JINA_API_KEY` environment variable
+- Reader API: URL to clean markdown, link extraction, image extraction, screenshots
+- Web Search with time filtering, location, and language parameters
+- Academic Search: arXiv and SSRN via domain parameter
+- Image Search
+- Query Expansion for deeper research coverage
+- Embeddings API: text embeddings (`jina-embeddings-v5-text-small`) and image embeddings (`jina-clip-v2`)
+- Reranker API (`jina-reranker-v3`) for document relevance sorting
+- PDF Extraction: figures, tables, and equations from arXiv papers or any PDF URL
+- Token Counting via Segment API
+- Best practices and tips for working with Jina AI APIs
+- Installation instructions for Cursor, Claude Code (personal and project), and Claude Desktop
+- README with "Why a skill and not MCP?" rationale
+
+[1.0.0]: https://github.com/YOUR_ORG/jina-ai-skill/releases/tag/v1.0.0
+[unreleased]: https://github.com/YOUR_ORG/jina-ai-skill/compare/v1.0.0...HEAD

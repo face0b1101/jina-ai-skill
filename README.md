@@ -20,7 +20,29 @@ export JINA_API_KEY="jina_xxxxxxxxxxxx"
 
 Get a free key at [jina.ai](https://jina.ai). No server to run, no dependencies to install.
 
+## Example usage
+
+Once configured, just ask your assistant in natural language:
+
+- "Read this article and summarise the key points: https://example.com/post"
+- "Search the web for the latest developments in LLM agents"
+- "Find arXiv papers on attention mechanisms published this year"
+- "Generate embeddings for these three product descriptions and show cosine similarity"
+- "Rerank these search results by relevance to my query"
+- "Extract all figures and tables from this PDF: https://example.com/paper.pdf"
+- "Take a screenshot of https://example.com and describe the layout"
+
+The assistant reads the skill, writes the `curl` commands, runs them, and explains the results.
+
 ## Installation
+
+### Claude Desktop (no git required)
+
+1. Download the zip from the [latest release](https://github.com/YOUR_ORG/jina-ai-skill/releases/latest)
+2. In Claude, go to **Settings > Capabilities** and ensure **Code execution** is enabled
+3. Under **Skills**, click **Upload skill** and select the zip
+
+Claude will automatically use the skill when your prompt involves Jina AI. See [Using Skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude) for more detail.
 
 ### Cursor
 
