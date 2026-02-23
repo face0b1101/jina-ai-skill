@@ -29,7 +29,7 @@ Once configured, just ask your assistant in natural language:
 - "Find arXiv papers on attention mechanisms published this year"
 - "Generate embeddings for these three product descriptions and show cosine similarity"
 - "Rerank these search results by relevance to my query"
-- "Extract all figures and tables from this PDF: https://example.com/paper.pdf"
+- "Extract all figures and tables from this PDF: https://example.com/paper.pdf" (or a file reference from workspace)
 - "Take a screenshot of https://example.com and describe the layout"
 
 The assistant reads the skill, writes the `curl` commands, runs them, and explains the results.
@@ -38,7 +38,7 @@ The assistant reads the skill, writes the `curl` commands, runs them, and explai
 
 ### Claude Desktop (no git required)
 
-1. Download the zip from the [latest release](https://github.com/YOUR_ORG/jina-ai-skill/releases/latest)
+1. Download the zip from the [latest release](https://github.com/face0b1101/jina-ai-skill/releases/latest)
 2. In Claude, go to **Settings > Capabilities** and ensure **Code execution** is enabled
 3. Under **Skills**, click **Upload skill** and select the zip
 
@@ -49,7 +49,7 @@ Claude will automatically use the skill when your prompt involves Jina AI. See [
 Clone into the Cursor skills directory:
 
 ```bash
-git clone https://github.com/YOUR_ORG/jina-ai-skill.git \
+git clone https://github.com/face0b1101/jina-ai-skill.git \
   ~/.cursor/skills/jina-ai
 ```
 
@@ -58,7 +58,7 @@ Cursor loads skills from `~/.cursor/skills/` automatically.
 ### Claude Code — personal skill (all projects)
 
 ```bash
-git clone https://github.com/YOUR_ORG/jina-ai-skill.git /tmp/jina-ai-skill
+git clone https://github.com/face0b1101/jina-ai-skill.git /tmp/jina-ai-skill
 mkdir -p ~/.claude/skills/jina-ai
 cp /tmp/jina-ai-skill/SKILL.md ~/.claude/skills/jina-ai/
 ```
@@ -68,7 +68,7 @@ cp /tmp/jina-ai-skill/SKILL.md ~/.claude/skills/jina-ai/
 From your project root:
 
 ```bash
-git clone https://github.com/YOUR_ORG/jina-ai-skill.git /tmp/jina-ai-skill
+git clone https://github.com/face0b1101/jina-ai-skill.git /tmp/jina-ai-skill
 mkdir -p .claude/skills/jina-ai
 cp /tmp/jina-ai-skill/SKILL.md .claude/skills/jina-ai/
 ```
@@ -99,4 +99,4 @@ MCP still makes sense for stateful connections, binary protocols, complex auth f
 
 ## Licence
 
-MIT
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — see [LICENCE](LICENCE) for full text.

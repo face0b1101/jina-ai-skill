@@ -12,6 +12,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Example usage section in README with natural-language prompt examples
 - Claude Desktop installation instructions (zip upload via Settings > Capabilities)
 - CHANGELOG.md
+- CC BY 4.0 licence (LICENCE file)
+
+### Changed
+
+- Replace placeholder GitHub URLs with `face0b1101/jina-ai-skill`
 
 ## [1.0.0] - 2026-02-23
 
@@ -33,5 +38,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Installation instructions for Cursor, Claude Code (personal and project), and Claude Desktop
 - README with "Why a skill and not MCP?" rationale
 
-[1.0.0]: https://github.com/YOUR_ORG/jina-ai-skill/releases/tag/v1.0.0
-[unreleased]: https://github.com/YOUR_ORG/jina-ai-skill/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/face0b1101/jina-ai-skill/releases/tag/v1.0.0
+[unreleased]: https://github.com/face0b1101/jina-ai-skill/compare/v1.0.0...HEAD
