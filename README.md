@@ -4,8 +4,8 @@ Markdown-based skill that teaches AI coding assistants (Cursor, Claude Code etc.
 
 ## What's in it
 
-| File       | What it covers                                                                                                |
-| ---------- | ------------------------------------------------------------------------------------------------------------- |
+| File       | What it covers                                                                                                     |
+| ---------- | ------------------------------------------------------------------------------------------------------------------ |
 | `SKILL.md` | Auth, Reader API (URL→markdown, screenshots), Web/Academic/Image search, Embeddings, Reranker, PDF extraction, VLM |
 
 The entire API surface fits in a single file — no `references/` directory needed.
