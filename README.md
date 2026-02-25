@@ -6,9 +6,22 @@ Markdown-based skill that teaches AI coding assistants (Cursor, Claude Code etc.
 
 | File       | What it covers                                                                                                |
 | ---------- | ------------------------------------------------------------------------------------------------------------- |
-| `SKILL.md` | Auth, Reader API (URL→markdown, screenshots), Web/Academic/Image search, Embeddings, Reranker, PDF extraction |
+| `SKILL.md` | Auth, Reader API (URL→markdown, screenshots), Web/Academic/Image search, Embeddings, Reranker, PDF extraction, VLM |
 
 The entire API surface fits in a single file — no `references/` directory needed.
+
+## Capabilities
+
+- **Reader** — convert any URL to clean markdown; extract links and images; capture screenshots
+- **Web Search** — search the web with time, location, and language filters
+- **Academic Search** — query arXiv and SSRN
+- **Image Search** — find images across the web
+- **Query Expansion** — expand a query into diverse reformulations for deeper research
+- **Embeddings** — generate text and image (CLIP) vectors; OpenAI-compatible format
+- **Reranker** — sort documents by relevance to a query
+- **PDF Extraction** — pull figures, tables, and equations from any PDF or arXiv paper
+- **Vision Language Model (VLM)** — chat with images and text, streaming supported
+- **Token Counting** — count tokens via the Segment API
 
 ## Configuration
 

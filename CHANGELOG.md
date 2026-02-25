@@ -7,8 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-02-25
+
 ### Added
 
+- VLM API (Vision Language Model) section — image+text chat, streaming, base64 input
 - Example usage section in README with natural-language prompt examples
 - Claude Desktop installation instructions (zip upload via Settings > Capabilities)
 - CHANGELOG.md
@@ -39,4 +42,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - README with "Why a skill and not MCP?" rationale
 
 [1.0.0]: https://github.com/face0b1101/jina-ai-skill/releases/tag/v1.0.0
-[unreleased]: https://github.com/face0b1101/jina-ai-skill/compare/v1.0.0...HEAD
+[1.1.0]: https://github.com/face0b1101/jina-ai-skill/releases/tag/v1.1.0
+[unreleased]: https://github.com/face0b1101/jina-ai-skill/compare/v1.1.0...HEAD
