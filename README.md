@@ -1,6 +1,6 @@
 # Jina AI Skill
 
-Markdown-based skill that teaches AI coding assistants (Cursor, Claude Code etc.) and desktop apps (Claude Desktop) how to use Jina AI APIs via REST/curl — no SDK or MCP required.
+Agent Skill that teaches AI assistants how to use Jina AI APIs via REST/curl — no SDK or MCP required.
 
 ## What's in it
 
@@ -49,7 +49,30 @@ The assistant reads the skill, writes the `curl` commands, runs them, and explai
 
 ## Installation
 
-### Claude Desktop (no git required)
+### Personal skill (all projects)
+
+Clone into the shared skills directory:
+
+```bash
+git clone https://github.com/face0b1101/jina-ai-skill.git \
+  ~/.agents/skills/jina-ai
+```
+
+Compatible agents (Cursor, Claude Code, VS Code, Codex, and others) scan `~/.agents/skills/` automatically per the [Agent Skills convention](https://agentskills.io/client-implementation/adding-skills-support).
+
+### Project skill (one repo)
+
+From your project root:
+
+```bash
+git clone https://github.com/face0b1101/jina-ai-skill.git /tmp/jina-ai-skill
+mkdir -p .agents/skills/jina-ai
+cp /tmp/jina-ai-skill/SKILL.md .agents/skills/jina-ai/
+```
+
+Commit the `.agents/skills/jina-ai/` directory so your team gets it too.
+
+### Claude Desktop
 
 1. Download the zip from the [latest release](https://github.com/face0b1101/jina-ai-skill/releases/latest)
 2. In Claude, go to **Settings > Capabilities** and ensure **Code execution** is enabled
@@ -57,46 +80,9 @@ The assistant reads the skill, writes the `curl` commands, runs them, and explai
 
 Claude will automatically use the skill when your prompt involves Jina AI. See [Using Skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude) for more detail.
 
-### Cursor
+### Verify
 
-Clone into the Cursor skills directory:
-
-```bash
-git clone https://github.com/face0b1101/jina-ai-skill.git \
-  ~/.cursor/skills/jina-ai
-```
-
-Cursor loads skills from `~/.cursor/skills/` automatically.
-
-### Claude Code — personal skill (all projects)
-
-```bash
-git clone https://github.com/face0b1101/jina-ai-skill.git /tmp/jina-ai-skill
-mkdir -p ~/.claude/skills/jina-ai
-cp /tmp/jina-ai-skill/SKILL.md ~/.claude/skills/jina-ai/
-```
-
-### Claude Code — project skill (one repo)
-
-From your project root:
-
-```bash
-git clone https://github.com/face0b1101/jina-ai-skill.git /tmp/jina-ai-skill
-mkdir -p .claude/skills/jina-ai
-cp /tmp/jina-ai-skill/SKILL.md .claude/skills/jina-ai/
-```
-
-Commit the `.claude/skills/jina-ai/` directory so your team gets it too.
-
-### Verify (Claude Code)
-
-Restart Claude Code, then run:
-
-```text
-/skills
-```
-
-You should see `jina-ai` in the list.
+After installing, check that your agent can see the skill. In Claude Code, run `/skills` and confirm `jina-ai` appears in the list.
 
 ## Why a skill and not MCP?
 
