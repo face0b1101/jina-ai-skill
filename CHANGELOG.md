@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-04-08
+
+### Added
+
+- DeepSearch section - multi-step research agent (read-search-reason loops) via `deepsearch.jina.ai/v1/chat/completions`
+- Streaming and non-streaming curl examples for DeepSearch
+- Multi-turn conversation example for DeepSearch
+- DeepSearch parameters reference table (reasoning_effort, budget_tokens, max_attempts, team_size, hostname controls, etc.)
+- DeepSearch response shape documentation (url_citation annotations, visitedURLs, readURLs)
+
+### Changed
+
+- Updated frontmatter description to include DeepSearch
+
 ## [1.1.0] - 2026-02-25
 
 ### Added
@@ -43,4 +57,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [1.0.0]: https://github.com/face0b1101/jina-ai-skill/releases/tag/v1.0.0
 [1.1.0]: https://github.com/face0b1101/jina-ai-skill/releases/tag/v1.1.0
-[unreleased]: https://github.com/face0b1101/jina-ai-skill/compare/v1.1.0...HEAD
+[1.2.0]: https://github.com/face0b1101/jina-ai-skill/releases/tag/v1.2.0
+[unreleased]: https://github.com/face0b1101/jina-ai-skill/compare/v1.2.0...HEAD
