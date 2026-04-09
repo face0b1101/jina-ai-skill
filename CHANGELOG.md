@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-04-09
+
+### Changed
+
+- Refactored `SKILL.md` from a 500-line monolith to a ~90-line routing manifest; auth pattern is the only curl example in the file
+- Each API entry now provides a description-only entry (endpoint, body, response shape in prose) with an explicit link to its reference file for curl examples
+- Moved all detailed curl examples, parameter tables, and response shapes into dedicated `references/` files for progressive disclosure (on-demand loading)
+
+### Added
+
+- `references/reader.md` — Reader API: URL to markdown, link extraction, image extraction, screenshots, headers reference
+- `references/search.md` — Web search (time-filtered, localised), academic search (arXiv, SSRN), image search, query expansion
+- `references/deepsearch.md` — Streaming, non-streaming, multi-turn, parameters table, response shape
+- `references/embeddings.md` — Text embeddings, image/CLIP embeddings, task parameter guidance
+- `references/reranker.md` — Full example, response shape, RAG usage notes
+- `references/pdf-extraction.md` — arXiv paper ID, URL, parameters, response shape
+- `references/vlm.md` — Image from URL, base64, text-only, streaming, cold-start note
+
 ## [1.2.1] - 2026-04-08
 
 ### Fixed
@@ -65,4 +83,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.1.0]: https://github.com/face0b1101/jina-ai-skill/releases/tag/v1.1.0
 [1.2.0]: https://github.com/face0b1101/jina-ai-skill/releases/tag/v1.2.0
 [1.2.1]: https://github.com/face0b1101/jina-ai-skill/releases/tag/v1.2.1
-[unreleased]: https://github.com/face0b1101/jina-ai-skill/compare/v1.2.1...HEAD
+[1.3.0]: https://github.com/face0b1101/jina-ai-skill/releases/tag/v1.3.0
+[unreleased]: https://github.com/face0b1101/jina-ai-skill/compare/v1.3.0...HEAD

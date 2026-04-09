@@ -4,68 +4,6 @@
 
 ______________________________________________________________________
 
-## AT STARTUP
-
-1. Check if `./.beads` folder exists.
-   If it exists, this project uses **beads (bd)** for issue tracking.
-
-   - Run `bd ready` to see available work before starting
-   - Reference issues in commits: `[bd-XX] description`
-
-2. Check if `./specify/` folder exists.
-   If it exists, this project uses **speckit** for specification-driven development.
-
-   - See the **Project Planning & Tracking** section below for speckit workflow details.
-
-______________________________________________________________________
-
-## Issue Tracking (if `.beads/` exists)
-
-This project can use `bd` (beads) for lightweight issue tracking with dependency support.
-
-**Check if enabled**: Look for `.beads/` folder in project root.
-
-**If enabled**, use these commands:
-
-```bash
-bd ready                    # What can I work on? (no blockers)
-bd list --status open       # All open issues
-bd create "title" --type bug  # Create new issue
-bd close [id] -r "reason"   # Close with reason
-```
-
-**Workflow integration**:
-
-- Before starting work: `bd ready`
-- Reference in commits: `[bd-XX] description`
-- After completing: `bd close bd-XX -r "Done"`
-
-______________________________________________________________________
-
-## Project Planning & Tracking (if `.specify/` exists)
-
-This project can use [speckit](https://speckit.org) for AI-powered specification-driven development.
-
-**Check if enabled**: Look for `.specify/` folder in project root.
-
-**If enabled**, encourage the user to use this workflow for new features:
-
-1. Use Speckit to define spec → plan → tasks (`/speckit.constitution`, `/speckit.specify`, `/speckit.plan`, `/speckit.tasks`)
-2. Track tasks:
-   - **If Beads is enabled** (`.beads/` exists): Convert tasks to Beads issues (`bd create`)
-   - **Otherwise**: Track tasks manually or use GitHub Issues
-3. **If using Beads**: Add dependencies between tasks (`bd dep add`)
-4. Implement using `/speckit.implement`
-5. Update task status as you progress:
-   - **With Beads**: `bd update`, `bd close`
-   - **Without Beads**: Update your tracking system manually
-6. **If using Beads**: File new issues for discovered work (`bd create --type discovered-from`)
-
-**Check ready work**:
-
-- **With Beads**: `bd ready --json`
-- **Without Beads**: Review your task list manually
-
 ______________________________________________________________________
 
 ## Releasing to GitHub
@@ -76,12 +14,13 @@ This project ships as a **zip of user-facing files** attached to a GitHub Releas
 
 Only these files belong in the zip:
 
-| File           | Purpose                      |
-| -------------- | ---------------------------- |
-| `SKILL.md`     | The skill (core deliverable) |
-| `README.md`    | Installation and usage guide |
-| `LICENCE`      | CC BY 4.0 licence text       |
-| `CHANGELOG.md` | Release history              |
+| File              | Purpose                                    |
+| ----------------- | ------------------------------------------ |
+| `SKILL.md`        | The skill manifest (core deliverable)      |
+| `references/*.md` | Detailed API instructions loaded on demand |
+| `README.md`       | Installation and usage guide               |
+| `LICENCE`         | CC BY 4.0 licence text                     |
+| `CHANGELOG.md`    | Release history                            |
 
 Do **not** include `AGENTS.md`, dotfiles (`.gitignore`, `.markdownlint.json`), or any other development artefact.
 
@@ -98,7 +37,7 @@ Do **not** include `AGENTS.md`, dotfiles (`.gitignore`, `.markdownlint.json`), o
 5. **Build the zip** in `/tmp` (not in the repo):
 
    ```bash
-   zip -j /tmp/jina-ai-skill-vX.Y.Z.zip SKILL.md README.md LICENCE CHANGELOG.md
+   zip /tmp/jina-ai-skill-vX.Y.Z.zip SKILL.md references/*.md README.md LICENCE CHANGELOG.md
    ```
 
 6. **Create the GitHub Release** with the zip attached:

@@ -4,11 +4,10 @@ Agent Skill that teaches AI assistants how to use Jina AI APIs via REST/curl —
 
 ## What's in it
 
-| File       | What it covers                                                                                                     |
-| ---------- | ------------------------------------------------------------------------------------------------------------------ |
-| `SKILL.md` | Auth, Reader API (URL→markdown, screenshots), Web/Academic/Image search, Embeddings, Reranker, PDF extraction, VLM |
-
-The entire API surface fits in a single file — no `references/` directory needed.
+| File               | What it covers                                                                          |
+| ------------------ | --------------------------------------------------------------------------------------- |
+| `SKILL.md`         | Routing manifest: auth pattern, API descriptions, and links to references               |
+| `references/*.md`  | Detailed curl examples, parameters, and response shapes for each API (loaded on demand) |
 
 ## Capabilities
 
@@ -92,7 +91,7 @@ Jina AI is a set of REST APIs with a single Bearer token. It doesn't need a prot
 
 **An MCP server** would mean a separate process to run and maintain, tool schemas consuming context tokens on every turn, and version compatibility issues between the server and your environment.
 
-Skills achieve progressive disclosure by design: `SKILL.md` loads when triggered, and the LLM only reads the sections it needs. No tool schema overhead, no server process, zero dependencies.
+Skills achieve progressive disclosure by design: `SKILL.md` loads when triggered as a lightweight manifest, and the LLM only reads the reference files it needs for the current task. No tool schema overhead, no server process, zero dependencies.
 
 MCP still makes sense for stateful connections, binary protocols, complex auth flows (OAuth), and non-HTTP tools. Jina AI doesn't need any of that.
 
