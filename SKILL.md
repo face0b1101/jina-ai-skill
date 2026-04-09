@@ -223,7 +223,7 @@ Returns an array of expanded query strings. Use these to run multiple searches f
 Multi-step research agent that iteratively searches, reads web pages, and reasons until it finds the best answer. Handles complex questions requiring synthesis across multiple sources. OpenAI-compatible chat completions format via `https://deepsearch.jina.ai/v1/chat/completions`. Model: `jina-deepsearch-v1`.
 
 > **Streaming strongly recommended.** DeepSearch requests average ~57s and can exceed 120s. Disabling streaming risks 524 timeout errors. Streaming also surfaces intermediate reasoning steps so you can observe progress.
-
+>
 > **When to use DeepSearch vs web search:** DeepSearch is for complex, multi-hop questions that require iterative reasoning and synthesis. For simple factual lookups, use `s.jina.ai` web search instead.
 
 ### Streaming (Recommended)

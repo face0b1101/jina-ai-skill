@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.1] - 2026-04-08
+
+### Fixed
+
+- Fix broken blockquote continuation in DeepSearch section (blank line between consecutive blockquotes)
+
 ## [1.2.0] - 2026-04-08
 
 ### Added
@@ -58,4 +64,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.0.0]: https://github.com/face0b1101/jina-ai-skill/releases/tag/v1.0.0
 [1.1.0]: https://github.com/face0b1101/jina-ai-skill/releases/tag/v1.1.0
 [1.2.0]: https://github.com/face0b1101/jina-ai-skill/releases/tag/v1.2.0
-[unreleased]: https://github.com/face0b1101/jina-ai-skill/compare/v1.2.0...HEAD
+[1.2.1]: https://github.com/face0b1101/jina-ai-skill/releases/tag/v1.2.1
+[unreleased]: https://github.com/face0b1101/jina-ai-skill/compare/v1.2.1...HEAD
