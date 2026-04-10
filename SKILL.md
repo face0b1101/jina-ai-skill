@@ -31,6 +31,8 @@ curl -s "https://<endpoint>" \
 
 Always use `$(printenv JINA_API_KEY)` instead of `$JINA_API_KEY` in curl headers to avoid empty-expansion issues. Some Reader API endpoints work without a key but have strict rate limits. Search, Embeddings, Reranker, and PDF extraction always require a key.
 
+**Note:** `printenv JINA_API_KEY` returns empty (not an error) when the variable is not exported in the current shell. Project-level `.env` files are not automatically sourced; the agent should check and source before calling (see the `jina-default` rule for the pre-flight workflow).
+
 ## Available APIs
 
 ### Reader API - `POST https://r.jina.ai/`
