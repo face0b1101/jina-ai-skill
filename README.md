@@ -1,5 +1,7 @@
 # Jina AI Skill
 
+**Version:** 1.3.2
+
 Agent Skill that teaches AI assistants how to use Jina AI APIs via REST/curl — no SDK or MCP required.
 
 ## What's in it
@@ -24,10 +26,11 @@ Agent Skill that teaches AI assistants how to use Jina AI APIs via REST/curl —
 
 ## Configuration
 
-Set your Jina API key as an environment variable before starting your assistant:
+Create `~/.agents/skills/jina-ai/.env` (gitignored) with `JINA_API_KEY=...`, or export
+in the shell. Before API calls in a session:
 
 ```bash
-export JINA_API_KEY="jina_xxxxxxxxxxxx"
+set -a && source ~/.agents/skills/jina-ai/.env && set +a
 ```
 
 Get a free key at [jina.ai](https://jina.ai). No server to run, no dependencies to install.

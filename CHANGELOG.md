@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.2] - 2026-06-02
+
+### Changed
+
+- `SKILL.md` and `README.md`: document gitignored skill-root `.env` and `set -a &&
+  source` pre-flight before Jina API calls
+
 ## [1.3.1] - 2026-04-10
 
 ### Changed
@@ -91,4 +98,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.2.1]: https://github.com/face0b1101/jina-ai-skill/releases/tag/v1.2.1
 [1.3.0]: https://github.com/face0b1101/jina-ai-skill/releases/tag/v1.3.0
 [1.3.1]: https://github.com/face0b1101/jina-ai-skill/releases/tag/v1.3.1
-[unreleased]: https://github.com/face0b1101/jina-ai-skill/compare/v1.3.1...HEAD
+[unreleased]: https://github.com/face0b1101/jina-ai-skill/compare/v1.3.2...HEAD
+[1.3.2]: https://github.com/face0b1101/jina-ai-skill/compare/v1.3.1...v1.3.2

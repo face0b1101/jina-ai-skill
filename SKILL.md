@@ -31,7 +31,28 @@ curl -s "https://<endpoint>" \
 
 Always use `$(printenv JINA_API_KEY)` instead of `$JINA_API_KEY` in curl headers to avoid empty-expansion issues. Some Reader API endpoints work without a key but have strict rate limits. Search, Embeddings, Reranker, and PDF extraction always require a key.
 
-**Note:** `printenv JINA_API_KEY` returns empty (not an error) when the variable is not exported in the current shell. Project-level `.env` files are not automatically sourced; the agent should check and source before calling (see the `jina-default` rule for the pre-flight workflow).
+### Local credentials (`.env`)
+
+Store `JINA_API_KEY` in a **gitignored** `.env` file in the skill root
+(`~/.agents/skills/jina-ai/.env`). Do not commit the key to the skill repository.
+
+**Before the first Jina call in a session**, source the file in the current shell
+(skills do not auto-load `.env`):
+
+```bash
+set -a && source ~/.agents/skills/jina-ai/.env && set +a
+```
+
+Pre-flight check (`printenv` returns empty when unset; Jina then returns 401
+"Invalid API key", which is easy to misread as a bad key):
+
+```bash
+printenv JINA_API_KEY || true
+test -n "$(printenv JINA_API_KEY)" && echo "JINA_API_KEY set"
+```
+
+If the skill `.env` is missing, check a project-level `.env` and export from there,
+or warn the user. See the `jina-default` rule for the full pre-flight workflow.
 
 ## Available APIs
 
