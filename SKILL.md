@@ -33,14 +33,21 @@ Always use `$(printenv JINA_API_KEY)` instead of `$JINA_API_KEY` in curl headers
 
 ### Local credentials (`.env`)
 
-Store `JINA_API_KEY` in a **gitignored** `.env` file in the skill root
-(`~/.agents/skills/jina-ai/.env`). Do not commit the key to the skill repository.
+Store `JINA_API_KEY` in a **gitignored** `.env` file in the skill root: the
+directory containing this `SKILL.md`. Do not commit the key to the skill
+repository.
 
-**Before the first Jina call in a session**, source the file in the current shell
-(skills do not auto-load `.env`):
+The skill may live under `~/.agents/skills/jina-ai/`, `~/.claude/skills/jina-ai/`,
+or another install path depending on the agent. Resolve the skill root from the
+path you used to read this skill; do not assume a fixed location.
+
+**Before the first Jina call in a session**, source that file in the current shell
+(skills do not auto-load `.env`; the agent shell CWD is usually your project,
+not the skill directory):
 
 ```bash
-set -a && source ~/.agents/skills/jina-ai/.env && set +a
+# SKILL_ROOT = directory containing this SKILL.md
+set -a && source "$SKILL_ROOT/.env" && set +a
 ```
 
 Pre-flight check (`printenv` returns empty when unset; Jina then returns 401
