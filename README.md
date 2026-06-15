@@ -1,3 +1,5 @@
+> **Archived.** This skill has been moved to the [face0b1101/will-work-agent-skills](https://github.com/face0b1101/will-work-agent-skills) catalogue under `skills/jina-ai/`. This repository is kept for history only.
+
 # Jina AI Skill
 
 **Version:** 1.3.3
